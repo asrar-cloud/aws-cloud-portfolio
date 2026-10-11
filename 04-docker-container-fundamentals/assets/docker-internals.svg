@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+<title id="title">Docker image, container, and host relationship</title><desc id="desc">A Docker image is a read-only set of layers. A container runs the process using the Docker host's kernel. This lab mounts its root filesystem read-only and publishes only to localhost.</desc>
+<rect width="1200" height="420" rx="22" fill="#faf8ef"/><path d="M0 50H1200M0 100H1200M0 150H1200M0 200H1200M0 250H1200M0 300H1200M0 350H1200M0 400H1200" stroke="#e8e7db"/>
+<text x="42" y="64" fill="#20394b" font-family="Arial,sans-serif" font-size="31" font-weight="700">What is actually running?</text>
+<text x="43" y="94" fill="#67808b" font-family="Arial,sans-serif" font-size="17">The image is a package; the container is a process with isolation on the Docker host.</text>
+<g fill="#fffdf7" stroke="#278fa7" stroke-width="3"><rect x="43" y="139" width="257" height="193" rx="15"/><rect x="382" y="139" width="372" height="193" rx="15"/><rect x="836" y="139" width="321" height="193" rx="15"/></g>
+<g font-family="Arial,sans-serif" fill="#20394b"><text x="65" y="176" font-size="23" font-weight="700">IMAGE</text><text x="404" y="176" font-size="23" font-weight="700">CONTAINER</text><text x="858" y="176" font-size="23" font-weight="700">DOCKER HOST</text></g>
+<g font-family="Arial,sans-serif" fill="#526c78" font-size="18"><text x="65" y="215">base Python layer</text><text x="65" y="250">site files layer</text><text x="65" y="285">read-only package</text><text x="404" y="215">Python HTTP process</text><text x="404" y="250">UID 10001 · root filesystem read-only</text><text x="404" y="285">listens on port 8000</text><text x="858" y="215">provides the kernel</text><text x="858" y="250">maps 127.0.0.1:8080</text><text x="858" y="285">to container port 8000</text></g>
+<g stroke="#d77835" stroke-width="3" fill="none"><path d="M300 238H382"/><path d="M754 238H836"/></g>
+<g fill="#d77835"><circle cx="300" cy="238" r="6"><animate attributeName="cx" values="300;382;300" dur="3.4s" repeatCount="indefinite"/></circle><circle cx="754" cy="238" r="6"><animate attributeName="cx" values="754;836;754" dur="3.4s" begin="1.7s" repeatCount="indefinite"/></circle></g>
+<text x="45" y="378" fill="#258ca4" font-family="Arial,sans-serif" font-size="19">Changing the page means rebuilding the image and recreating the container.</text>
+</svg>

@@ -1,0 +1,9 @@
+.git
+*.md
+*.svg
+*.png
+*.gif
+.env
+*.pem
+*.key
+__pycache__
