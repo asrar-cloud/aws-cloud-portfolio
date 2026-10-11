@@ -1,0 +1,2 @@
+aws_region = "ap-south-1"
+instance_id = "i-REPLACE-WITH-YOUR-INSTANCE-ID"
